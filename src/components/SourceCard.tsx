@@ -112,9 +112,9 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
         {scene && (
           <div
             id={`source-scene-${scene.number}`}
-            className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.07] hover:border-white/[0.14] transition-colors flex items-start gap-2.5"
+            className="p-3 rounded-xl bg-gradient-to-b from-[#111c38]/85 to-[#0c1428]/90 border border-white/[0.08] hover:border-indigo-500/40 transition-colors flex items-start gap-2.5"
           >
-            <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 shrink-0 mt-0.5">
+            <div className="p-1.5 rounded-lg bg-indigo-500/20 text-indigo-400 shrink-0 mt-0.5">
               <Film className="w-3.5 h-3.5" />
             </div>
             <div className="min-w-0 flex-1">
@@ -129,7 +129,7 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
               <h4 className="text-xs font-semibold text-white truncate">
                 Scene {scene.number} — {scene.title}
               </h4>
-              <p className="text-[11px] text-slate-400 mt-0.5 truncate">
+              <p className="text-[11px] text-slate-300 mt-0.5 truncate">
                 {scene.location}
               </p>
             </div>
@@ -141,9 +141,9 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
           <div
             key={asset.id}
             id={`source-asset-${asset.id}`}
-            className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.07] hover:border-white/[0.14] transition-colors flex items-start gap-2.5"
+            className="p-3 rounded-xl bg-gradient-to-b from-[#111c38]/85 to-[#0c1428]/90 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors flex items-start gap-2.5"
           >
-            <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0 mt-0.5">
+            <div className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
               <CheckCircle2 className="w-3.5 h-3.5" />
             </div>
             <div className="min-w-0 flex-1">
@@ -151,7 +151,7 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
                 <span className="text-[10px] font-mono font-medium text-emerald-300 uppercase tracking-wider">
                   Approved Asset
                 </span>
-                <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-mono">
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono border border-emerald-500/30">
                   {asset.version} • {asset.status}
                 </span>
               </div>
@@ -159,7 +159,7 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
                 {asset.name}
               </h4>
               {asset.format && (
-                <p className="text-[11px] text-slate-400 font-mono mt-0.5 truncate">
+                <p className="text-[11px] text-slate-300 font-mono mt-0.5 truncate">
                   {asset.format}
                 </p>
               )}
@@ -172,9 +172,9 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
           <div
             key={dec.id}
             id={`source-decision-${dec.id}`}
-            className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.07] hover:border-white/[0.14] transition-colors flex items-start gap-2.5"
+            className="p-3 rounded-xl bg-gradient-to-b from-[#111c38]/85 to-[#0c1428]/90 border border-violet-500/20 hover:border-violet-500/40 transition-colors flex items-start gap-2.5"
           >
-            <div className="p-1.5 rounded-lg bg-violet-500/10 text-violet-400 shrink-0 mt-0.5">
+            <div className="p-1.5 rounded-lg bg-violet-500/20 text-violet-400 shrink-0 mt-0.5">
               <Compass className="w-3.5 h-3.5" />
             </div>
             <div className="min-w-0 flex-1">
@@ -190,7 +190,7 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
                 {dec.decision}
               </h4>
               {dec.reason && (
-                <p className="text-[11px] text-slate-400 mt-1 italic leading-snug">
+                <p className="text-[11px] text-slate-300 mt-1 italic leading-snug">
                   “{dec.reason}”
                 </p>
               )}
@@ -203,9 +203,9 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
           <div
             key={cont.id}
             id={`source-continuity-${cont.id}`}
-            className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.07] hover:border-white/[0.14] transition-colors flex items-start gap-2.5"
+            className="p-3 rounded-xl bg-gradient-to-b from-[#111c38]/85 to-[#0c1428]/90 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors flex items-start gap-2.5"
           >
-            <div className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0 mt-0.5">
+            <div className="p-1.5 rounded-lg bg-cyan-500/20 text-cyan-400 shrink-0 mt-0.5">
               <BookmarkCheck className="w-3.5 h-3.5" />
             </div>
             <div className="min-w-0 flex-1">
@@ -214,7 +214,7 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
                   Continuity • {cont.category}
                 </span>
                 {cont.priority && (
-                  <span className="text-[10px] px-1 py-0.2 rounded bg-cyan-500/20 text-cyan-300 font-mono">
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono border border-cyan-500/30">
                     {cont.priority}
                   </span>
                 )}
@@ -222,7 +222,7 @@ export const SourceCards: React.FC<SourceCardsProps> = ({ sources }) => {
               <h4 className="text-xs font-semibold text-white leading-snug">
                 {cont.note}
               </h4>
-              <p className="text-[10px] text-slate-400 font-mono mt-0.5">
+              <p className="text-[10px] text-slate-300 font-mono mt-0.5">
                 Source: {cont.source}
               </p>
             </div>

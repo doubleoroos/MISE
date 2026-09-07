@@ -22,7 +22,7 @@ export const NewProductionModal: React.FC<NewProductionModalProps> = ({
     >
       <div
         id="new-production-modal-content"
-        className="w-full max-w-xl rounded-2xl bg-[#0e101a] border border-white/[0.12] shadow-2xl overflow-hidden p-6 sm:p-7 relative animate-in zoom-in-95 duration-200"
+        className="w-full max-w-xl rounded-2xl bg-[#0b1327] border border-white/[0.14] shadow-2xl overflow-hidden p-6 sm:p-7 relative animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -30,7 +30,7 @@ export const NewProductionModal: React.FC<NewProductionModalProps> = ({
           id="btn-close-new-production-modal"
           type="button"
           onClick={onClose}
-          className="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors"
+          className="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.08] transition-colors"
           title="Close modal"
         >
           <X className="w-5 h-5" />
@@ -41,10 +41,10 @@ export const NewProductionModal: React.FC<NewProductionModalProps> = ({
           <span className="p-1 rounded-md bg-indigo-500/20 text-indigo-400">
             <Sparkles className="w-3.5 h-3.5" />
           </span>
-          <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-300">
-            MISE Production Architecture
+          <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-300 font-semibold">
+            MISE Production Memory
           </span>
-          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 ml-auto mr-7">
+          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 ml-auto mr-7">
             Demo workflow
           </span>
         </div>
@@ -52,23 +52,23 @@ export const NewProductionModal: React.FC<NewProductionModalProps> = ({
         <h2 className="text-xl sm:text-2xl font-bold text-white font-['Plus_Jakarta_Sans']">
           Create a production
         </h2>
-        <p className="text-sm text-slate-300 mt-1 leading-relaxed">
-          Start a new Production Memory by adding your project materials.
+        <p className="text-sm text-slate-200 mt-1 leading-relaxed">
+          Start a new Production Memory by adding project materials.
         </p>
 
         {/* Tab Selection */}
-        <div className="grid grid-cols-3 gap-2 mt-5 p-1 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+        <div className="grid grid-cols-3 gap-2 mt-5 p-1 rounded-xl bg-[#070e1c] border border-white/[0.08]">
           <button
             type="button"
             onClick={() => setActiveTab('screenplay')}
             className={`flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'screenplay'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/40 shadow-sm'
+                ? 'bg-indigo-600/40 text-white border border-indigo-500/50 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>Screenplay</span>
+            <span>Upload screenplay</span>
           </button>
 
           <button
@@ -76,12 +76,12 @@ export const NewProductionModal: React.FC<NewProductionModalProps> = ({
             onClick={() => setActiveTab('documents')}
             className={`flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'documents'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/40 shadow-sm'
+                ? 'bg-indigo-600/40 text-white border border-indigo-500/50 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <Upload className="w-3.5 h-3.5" />
-            <span>Documents</span>
+            <span>Upload documents</span>
           </button>
 
           <button
@@ -89,12 +89,12 @@ export const NewProductionModal: React.FC<NewProductionModalProps> = ({
             onClick={() => setActiveTab('import')}
             className={`flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'import'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/40 shadow-sm'
+                ? 'bg-indigo-600/40 text-white border border-indigo-500/50 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <Cloud className="w-3.5 h-3.5" />
-            <span>Import</span>
+            <span>Import materials</span>
           </button>
         </div>
 

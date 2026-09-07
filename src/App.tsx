@@ -8,6 +8,7 @@ import { Scene, ChatMessage } from './types';
 import { SCENES } from './data/mockProductionData';
 import { TopBar } from './components/TopBar';
 import { AskMiseView } from './components/AskMiseView';
+import { SceneContextPanel } from './components/SceneContextPanel';
 import { NewProductionModal } from './components/NewProductionModal';
 import {
   sendQuestionToMise,
@@ -111,15 +112,23 @@ export default function App() {
         isConnecting={isLoading}
       />
 
-      {/* Main Single Action Area: Ask MISE */}
-      <main className="flex-1 flex overflow-hidden min-h-0 w-full relative">
-        <AskMiseView
-          messages={messages}
-          isLoading={isLoading}
+      {/* Main Experience: Center Ask MISE view + Right Scene Context Panel */}
+      <main className="flex-1 flex flex-col lg:flex-row overflow-hidden min-h-0 w-full relative">
+        <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
+          <AskMiseView
+            messages={messages}
+            isLoading={isLoading}
+            selectedScene={selectedScene}
+            onSendMessage={handleSendMessage}
+            onSelectSceneByNumber={handleSelectSceneByNumber}
+            onResetSession={handleResetSession}
+          />
+        </div>
+
+        {/* Right Sidebar: Compact Live Context (Approved asset, Decision, Continuity note) */}
+        <SceneContextPanel
           selectedScene={selectedScene}
-          onSendMessage={handleSendMessage}
-          onSelectSceneByNumber={handleSelectSceneByNumber}
-          onResetSession={handleResetSession}
+          onAskAbout={handleSendMessage}
         />
       </main>
 

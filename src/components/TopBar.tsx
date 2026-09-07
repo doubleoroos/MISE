@@ -22,7 +22,7 @@ export const TopBar: React.FC<TopBarProps> = ({
   return (
     <header
       id="top-navigation-bar"
-      className="border-b border-white/[0.07] bg-[#090a0f]/90 backdrop-blur-xl sticky top-0 z-40"
+      className="border-b border-white/[0.08] bg-[#091124]/95 backdrop-blur-xl sticky top-0 z-40 shadow-lg shadow-black/20"
     >
       {/* Primary Top Bar Row */}
       <div className="h-14 px-4 sm:px-6 flex items-center justify-between gap-3">
@@ -30,8 +30,8 @@ export const TopBar: React.FC<TopBarProps> = ({
         <div className="flex items-center gap-3 sm:gap-4 overflow-x-auto no-scrollbar py-1">
           {/* MISE Wordmark */}
           <div className="flex items-center gap-2 shrink-0">
-            <div className="relative w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 via-violet-600 to-cyan-500 p-[1px] shadow-md shadow-indigo-500/20">
-              <div className="w-full h-full bg-[#090a0f] rounded-[7px] flex items-center justify-center">
+            <div className="relative w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 via-violet-600 to-cyan-400 p-[1px] shadow-md shadow-indigo-500/20">
+              <div className="w-full h-full bg-[#081022] rounded-[7px] flex items-center justify-center">
                 <Film className="w-3.5 h-3.5 text-cyan-400" />
               </div>
             </div>
@@ -56,11 +56,11 @@ export const TopBar: React.FC<TopBarProps> = ({
             id="btn-new-production"
             type="button"
             onClick={onOpenNewProduction}
-            className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.07] border border-white/[0.08] hover:border-white/[0.18] transition-all shrink-0"
+            className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-200 hover:text-white bg-[#0f1a36]/80 hover:bg-[#152347] border border-white/[0.1] hover:border-indigo-500/40 transition-all shrink-0"
             title="Create a new production memory"
           >
             <Plus className="w-3.5 h-3.5 text-indigo-400" />
-            <span>New Production</span>
+            <span>+ New Production</span>
           </button>
         </div>
 
@@ -71,7 +71,7 @@ export const TopBar: React.FC<TopBarProps> = ({
             id="btn-new-production-mobile"
             type="button"
             onClick={onOpenNewProduction}
-            className="md:hidden p-1.5 rounded-lg text-slate-300 hover:text-white bg-white/[0.03] border border-white/[0.08]"
+            className="md:hidden p-1.5 rounded-xl text-slate-200 hover:text-white bg-[#0f1a36]/80 border border-white/[0.1]"
             title="New Production"
           >
             <Plus className="w-3.5 h-3.5 text-indigo-400" />
@@ -80,7 +80,7 @@ export const TopBar: React.FC<TopBarProps> = ({
           {/* Simple Connected Status */}
           <div
             id="status-indicator-connected"
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono text-emerald-400 bg-emerald-950/30 border border-emerald-500/20"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/25"
             title="Connected to MISE Production Memory"
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -97,7 +97,7 @@ export const TopBar: React.FC<TopBarProps> = ({
             onClick={onResetSession}
             disabled={isConnecting}
             title="Clear & Start Fresh"
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.05] transition-colors border border-transparent hover:border-white/[0.08]"
+            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors border border-transparent hover:border-white/[0.08]"
           >
             <RotateCcw className="w-3.5 h-3.5" />
           </button>
@@ -107,12 +107,12 @@ export const TopBar: React.FC<TopBarProps> = ({
       {/* Brief Flow Helper Line */}
       <div
         id="production-flow-helper-bar"
-        className="px-4 sm:px-6 py-1 border-t border-white/[0.04] bg-white/[0.01] flex items-center justify-between text-[11px] text-slate-400 font-mono tracking-tight"
+        className="px-4 sm:px-6 py-1.5 border-t border-white/[0.06] bg-[#070e1e]/90 flex items-center justify-between text-[11px] text-slate-300 font-mono tracking-tight"
       >
         <p className="truncate">
-          Create or select a production, add your materials, then ask MISE about scenes, assets, decisions and continuity.
+          Create or select a production, add materials, then ask MISE about scenes, assets, decisions and continuity.
         </p>
-        <span className="hidden lg:inline text-[10px] text-indigo-400 font-semibold uppercase tracking-wider shrink-0 pl-3">
+        <span className="hidden lg:inline text-[10px] text-indigo-300 font-semibold uppercase tracking-wider shrink-0 pl-3">
           1. Select Production → 2. Add Materials → 3. Ask MISE
         </span>
       </div>
