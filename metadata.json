@@ -2,5 +2,7 @@
   "name": "MISE - Production Memory",
   "description": "AI-powered Production Memory system for filmmakers, producers, editors, VFX teams, and studio crews.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
