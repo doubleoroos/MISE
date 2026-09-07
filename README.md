@@ -2,6 +2,9 @@
 
 > Production Memory for Filmmakers.
 
+**Created by**: Roos van der Jagt / Double O Roos  
+**Submitted through**: Stichting Earth Rising
+
 ## Overview
 
 **MISE** is an AI-powered Production Memory system designed for film and media production teams. It provides filmmakers, producers, editors, VFX supervisors, and studio crews with a single, verifiable layer of truth to query critical production knowledge, including:
@@ -263,6 +266,8 @@ The following features represent the forward-looking roadmap and are **not yet i
 - **Event**: Google Cloud Agentic Cinema Hackathon
 - **Track**: ClickHouse Track
 - **Project**: MISE — Production Memory for Filmmakers
+- **Created by**: Roos van der Jagt / Double O Roos
+- **Submitted through**: Stichting Earth Rising
 - Built and verified during the hackathon period.
 
 ---
